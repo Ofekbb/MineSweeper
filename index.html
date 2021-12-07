@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="initGame()">
+    <h2> 💣 MineSweeper 💣 </h2>
+    <div class="container">
+        <h3>Flags: <span class="flags">0</span></h3>
+        <span class='img-smiley' onclick="initGame()"></span>
+        <span class='life'></span>
+        <h3>Time: <span class="timer">0</span></h3>
+    </div>
+    </br>
+    <div class="board"></div>
+    </br>
+    <div class="container">
+        <h4>Choose level:</h3>
+            <form class="form-levels">
+                <input type="radio" onclick="getLevel(this)" name="level" id="1" value="easy" checked> Easy
+                <input type="radio" onclick="getLevel(this)" name="level" id="2" value="medium"> Medium
+                <input type="radio" onclick="getLevel(this)" name="level" id="3" value="hard"> Hard
+            </form>
+            <button class="safe-click" onclick="safeClickSub(event)">Safe Clicks - 3</button>
+            <button class="sound-mode" onclick="soundMode()">🔊</button>
+    </div>
+
+    <div class="credit"> © Ofek Ben Baruch</div>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
