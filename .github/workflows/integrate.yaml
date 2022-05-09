@@ -4,7 +4,7 @@ on:
   pull_request:
     branch: [master]
     
- jobs:
+jobs:
   test_pull_request:
     runs-on:ubuntu-latest
     steps:
